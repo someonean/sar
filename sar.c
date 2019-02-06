@@ -1,4 +1,4 @@
-/* Yaarf: yet another archive format */
+/* Read LICENSE for information on the license */
 #include <stdio.h>
 #include <dirent.h>
 #include <stdlib.h>
