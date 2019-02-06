@@ -100,7 +100,7 @@ void unpackdir(FILE *fp, char *dir_path, int files_num)
 	FILE *fp2;
 	char oldpwd[100];
 
-	mkdir(dir_path, 0755); /* If mkdir returned error becsuse this directory already exists, then good, if because of
+	mkdir(dir_path, 0755); /* If mkdir returned error because this directory already exists, then good, if because of
 				another reason, we will get an error later anyway. No need to check the return value of mkdir.
 				;) */
 	if(!getcwd(oldpwd, 100))
