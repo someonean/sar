@@ -166,7 +166,7 @@ int main(int argc, char **argv)
 
 	if(argc != 4)
 	{
-		fprintf(stderr, "Usage: yaarf <c|x> <archive file> <directory>\n");
+		fprintf(stderr, "Usage: sar <c|x> <archive file> <directory>\n");
 		return EXIT_FAILURE;
 	}
 	if(argv[1][0] == 'c') fptr = fopen(argv[2], "wb");
