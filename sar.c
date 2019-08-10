@@ -167,14 +167,14 @@ int main(int argc, char **argv)
 	if(argc != 4)
 	{
 		fprintf(stderr, "Usage: sar <c|x> <archive file> <directory>\n");
-		return EXIT_FAILURE;
+		exit(EXIT_FAILURE);
 	}
 	if(argv[1][0] == 'c') fptr = fopen(argv[2], "wb");
 	else if(argv[1][0] == 'x') fptr = fopen(argv[2], "rb");
 	if(!fptr)
 	{
 		perror(argv[2]);
-		return EXIT_FAILURE;
+		exit(EXIT_FAILURE);
 	}
 	if(argv[1][0] == 'c') packdir(fptr, argv[3]);
 	else if(argv[1][0] == 'x')
@@ -191,8 +191,8 @@ int main(int argc, char **argv)
 	else
 	{
 		fprintf(stderr, "%s: Invalid argument\n", argv[1]);
-		return EXIT_FAILURE;
+		exit(EXIT_FAILURE);
 	}
 	fclose(fptr);
-	return EXIT_SUCCESS;
+	exit(EXIT_SUCCESS);
 }
