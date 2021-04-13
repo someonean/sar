@@ -113,7 +113,7 @@ void unpackdir(FILE *fp, char *dir_path, int files_num)
 		perror(dir_path);
 		exit(EXIT_FAILURE);
 	}
-	for(i = 1; i <= files_num; i++)
+	for(i = 0; i < files_num; i++)
 	{
 		ch = getc(fp);
 		switch(ch)
@@ -126,7 +126,7 @@ void unpackdir(FILE *fp, char *dir_path, int files_num)
 					perror(file_info.name);
 					exit(EXIT_FAILURE);
 				}
-				for(j = 1; j <= file_info.size; j++)
+				for(j = 0; j < file_info.size; j++)
 				{
 					ch = getc(fp);
 					if(ch == EOF)
